@@ -1,0 +1,70 @@
+/*************************
+*****     PACMAN     *****
+*************************/
+
+pacman -S csomagneve          : csomag telepítése
+pacman -Ss csomagneve         : csomag keresése
+pacman -Si csomagneve         : csomag információ
+pacman -U könyvtár            : helyi csomag telepítése
+pacman -Qq csomagneve         : minden csomag listázása
+pacman -Qm                    : nem hivatalos csomga lista
+pacman - Pu                   : frissítendő csomagok listája
+pacman -R csomagneve          : csomag törlése
+pacman -Rnsc csomagneve       : csomag törlése függőségekkel és konfigurációkkal
+pacman -Syu vagy pacman -Syyu : rendszer frissítése
+
+
+/*********************
+*****     LS     *****
+*********************/
+
+-a    : mutasd mind
+-R    : rekurzív lista
+-S    : rendezés méret szerint
+-l    : hosszú listázás
+-d    : csak a könytárak
+-a    : rejtett fájok és könyvtárak
+-lias : teljes listázás
+
+
+/***********************************
+*****     SYSTEM ÉS KERNEL     *****
+***********************************/
+
+uname       : kernel neve
+uname -v    : kernel verziója
+lscpu       : CPU információk listája
+screenfetch : arch linux rendszerinformációk
+	automatikus beállítás:
+		sudo su
+		echo screenfetch >> /etc/bash.bashrc
+		vagy
+		echo neofetch >> /etc/bash.bashrc
+hwinfo      : összes hardvare információ
+lspci       : PCI lista
+lsusb       : USB lista
+fdisk -l    : lemezpartíciók listája
+top         : rendszerfolyamatok
+inxi -G     : telepített driverek listája
+
+
+/***********************
+*****     FIND     *****
+***********************/
+
+find <st­art­ing­dir­ect­ory> <op­tio­ns> <search term> : alapfelépítés
+find . -name "­file” : keresés név szerint
+find . -iname "­file” : Név szerint keresés, figyelmen kíül hagyva a CL-t
+find . -name “*.format” : formátum keresése
+find . -not -name "­fil­e" : név kizárása
+find . -type "­typ­e" : f:fájl, d:könyvtár, l:link...
+find . -empty : üres fájok és könyvtárak keresése
+find . -exec : végrehajtható programok keresése
+
+
+/******************************
+*****     REDIRECTING     *****
+******************************/
+
+a > b : stdout átirányítása
+$(!!) : Utolsó parancskiment átirányítása egy újba
